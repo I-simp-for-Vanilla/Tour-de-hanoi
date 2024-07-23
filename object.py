@@ -11,24 +11,14 @@ class Button(pygame.sprite.Sprite):
         self.rect.centery = centery
         self.image.fill(white)
 
+        self.text = PARAGRAPH.render(self.role, 1, black)
+        self.text_rect = self.text.get_rect()
+        self.text_rect.center = self.rect.center
+
     def update(self):
         
         screen.blit(self.image, self.rect)
-
-    def click(self):
-        if self.role == "start":
-            TowerA = Tower(1)
-            TowerB = Tower(2)
-            TowerC = Tower(3)
-
-            all_towers.add(TowerA)
-            all_towers.add(TowerB)
-            all_towers.add(TowerC)
-
-            for i in range(level):
-                disk = Disk(level-i, HEIGHT-25*i)
-                all_disks.add(disk)
-                TowerA.empile(disk)
+        screen.blit(self.text, self.text_rect)
 
 class Disk(pygame.sprite.Sprite):
 
@@ -40,7 +30,7 @@ class Disk(pygame.sprite.Sprite):
         self.rect.bottom = bottom
         self.rect.centerx = WIDTH*0.25
         self.image.fill(white)
-        self.text = ARIAL.render(str(id), 1, black)
+        self.text = PARAGRAPH.render(str(id), 1, black)
         self.text_rect = self.text.get_rect()
         self.text_rect.center = self.rect.center
 

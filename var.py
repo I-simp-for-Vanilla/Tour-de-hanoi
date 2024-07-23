@@ -8,6 +8,7 @@ screen = pygame.display.set_mode((WIDTH, HEIGHT))
 black = (0, 0, 0)
 white = (255, 255, 255)
 
-level = int(input(".\nEnter the number of discs of the tower you want to solve : "))
+level = 5
 
-ARIAL = pygame.font.SysFont("Arial", 25, 1, 1)
+TITLE = pygame.font.SysFont("Arial", 50, 1, 1)
+PARAGRAPH = pygame.font.SysFont("Arial", 25, 1, 1)
