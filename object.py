@@ -73,7 +73,6 @@ class Tower(pygame.sprite.Sprite):
             self.content[i].display(rect, text_rect)
 
 all_towers = pygame.sprite.Group()
-all_disks = pygame.sprite.Group()
 
 TowerA = Tower(1)
 TowerB = Tower(2)
@@ -82,8 +81,3 @@ TowerC = Tower(3)
 all_towers.add(TowerA)
 all_towers.add(TowerB)
 all_towers.add(TowerC)
-
-for i in range(level):
-    disk = Disk(level-i, HEIGHT-25*i)
-    all_disks.add(disk)
-    TowerA.empile(disk)
