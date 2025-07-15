@@ -46,6 +46,3 @@ The goal is to move all disks from the first tower to the last tower while follo
 
 ## Author
 Antonin Lartillot-Auteuil
-
-## License
-This project is licensed under the MIT License. You are free to use, modify, and distribute it. 
